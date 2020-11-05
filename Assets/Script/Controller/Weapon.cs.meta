@@ -3,7 +3,9 @@ guid: 3a5ca154726b6b94689bd1b8744db74b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - weaponParent: {instanceID: 0}
+  - bulletholePrefab: {fileID: 2995114543330026117, guid: a4f366255b43f834893a9e9e2a5a7a98, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

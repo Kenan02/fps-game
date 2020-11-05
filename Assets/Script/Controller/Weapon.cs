@@ -23,7 +23,8 @@ namespace kenan.daniel.spel
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1)) Equip(0);
-            if (Input.GetKeyDown(KeyCode.Alpha2)) Equip(1);
+            if (Input.GetKeyDown(KeyCode.Alpha2)) Debug.Log("equiped"); Equip(1); 
+            
             
 
             if (currentWeapon != null)
