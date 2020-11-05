@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc25a2148ad954419bb4b3af0f36603, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  Name: Glock
+  firerate: 0
+  prefab: {fileID: 2044463398603973348, guid: 1fd432d616bc2a043bebfa27f7b23254, type: 3}
