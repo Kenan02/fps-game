@@ -10,6 +10,7 @@ public class MouseLook : MonoBehaviour
     float xRot;
     public Transform playerBody;
     public Transform weapon;
+    public Transform cams;
     #endregion 
 
     #region Monobehaviour
@@ -20,6 +21,7 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        //Mouse Rotation
         float mouseX = Input.GetAxis("Mouse X") * Sens * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * Sens * Time.deltaTime;
 
@@ -27,8 +29,11 @@ public class MouseLook : MonoBehaviour
         xRot = Mathf.Clamp(xRot, -60f, 60f);
 
         transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
-        weapon.localRotation = transform.localRotation;
         playerBody.Rotate(Vector3.up * mouseX);
+
+        //Weapon rotation
+        weapon.localRotation = transform.localRotation;
+        weapon.rotation = cams.rotation;
     }
     #endregion
     

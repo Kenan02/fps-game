@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cc25a2148ad954419bb4b3af0f36603, type: 3}
-  m_Name: M4A4
+  m_Name: Knife
   m_EditorClassIdentifier: 
-  Name: M4A4
+  Name: Bayonett
   firerate: 0
-  prefab: {fileID: 3306683637328482888, guid: e18a87703b0404146bb4cad3c6c0c3cd, type: 3}
+  prefab: {fileID: 4382196580163727959, guid: e0b9794ac58a9f54ea312cbf23cc3f37, type: 3}
