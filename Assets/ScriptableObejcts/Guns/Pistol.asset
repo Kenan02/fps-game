@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Glock
   firerate: 0
-  prefab: {fileID: 8403535853878772541, guid: d2c6152474f5c7d41bade1f10ae281da, type: 3}
+  prefab: {fileID: 3062698972721503836, guid: 70641b6a9f940eb48b0366d8da3a6748, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: M4A4
   firerate: 0
-  prefab: {fileID: 3306683637328482888, guid: e18a87703b0404146bb4cad3c6c0c3cd, type: 3}
+  prefab: {fileID: 7774121565735132455, guid: e18a87703b0404146bb4cad3c6c0c3cd, type: 3}
