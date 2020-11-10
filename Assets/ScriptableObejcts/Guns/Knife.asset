@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bayonett
   firerate: 0
-  prefab: {fileID: 4188167839927003739, guid: 40c176224695d35409e5896a462d84de, type: 3}
+  bloom: 0
+  recoil: 0
+  kickback: 0
+  prefab: {fileID: 4565379689640521582, guid: 99e12f4b019642f48b3aa1096a79f414, type: 3}
