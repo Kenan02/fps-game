@@ -6,6 +6,9 @@ public class Gun : ScriptableObject
 {
     public string Name;
     public float firerate;
+    public float bloom;
+    public float recoil;
+    public float kickback;
     public GameObject prefab;
 }
 }

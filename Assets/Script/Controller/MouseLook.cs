@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace kenan.daniel.spel{
+
 public class MouseLook : MonoBehaviour
 {
     #region Variables
@@ -39,4 +41,5 @@ public class MouseLook : MonoBehaviour
     
     #region Private Methods
     #endregion
+}
 }

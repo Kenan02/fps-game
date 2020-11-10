@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   Name: Glock
-  firerate: 0
+  firerate: 1
+  bloom: 20
+  recoil: 5
+  kickback: 0.2
   prefab: {fileID: 3062698972721503836, guid: 70641b6a9f940eb48b0366d8da3a6748, type: 3}

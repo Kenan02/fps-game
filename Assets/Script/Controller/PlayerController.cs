@@ -1,5 +1,5 @@
-
 using UnityEngine;
+namespace kenan.daniel.spel{
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -92,3 +92,4 @@ public class PlayerController : MonoBehaviour
 
 }
 
+}

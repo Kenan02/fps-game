@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: M4A4
   m_EditorClassIdentifier: 
   Name: M4A4
-  firerate: 0
+  firerate: 1000
+  bloom: 20
+  recoil: 1
+  kickback: 0.1
   prefab: {fileID: 7774121565735132455, guid: e18a87703b0404146bb4cad3c6c0c3cd, type: 3}
