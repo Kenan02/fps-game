@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cc25a2148ad954419bb4b3af0f36603, type: 3}
-  m_Name: Pistol
+  m_Name: AK-47
   m_EditorClassIdentifier: 
-  Name: Glock
-  firerate: 1
-  bloom: 20
-  recoil: 5
-  kickback: 0.2
-  prefab: {fileID: 1156182721014270864, guid: 6e846c78b9cc99a409ba5b64edf04dad, type: 3}
+  Name: AK-47
+  firerate: 20
+  bloom: 5
+  recoil: 3
+  kickback: 1
+  prefab: {fileID: 2665816474552065377, guid: cff9531a7e6189a41a78db812793fc37, type: 3}

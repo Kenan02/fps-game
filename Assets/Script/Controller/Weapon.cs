@@ -31,6 +31,7 @@ namespace kenan.daniel.spel
             if (Input.GetKeyDown(KeyCode.Alpha1)) Equip(0);
             if (Input.GetKeyDown(KeyCode.Alpha2)) Equip(1);
             if (Input.GetKeyDown(KeyCode.Alpha3)) Equip(2);
+            if (Input.GetKeyDown(KeyCode.Alpha4)) Equip(3);
 
 
             if (currentWeapon != null)
