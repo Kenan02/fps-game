@@ -638,6 +638,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -64.89
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: dd77e67a6b2307d4e9a8147ef034f3d4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d247dbf60b9f2e543b46bb21ed436ff8, type: 2}
     - target: {fileID: 6000407479487422213, guid: dd77e67a6b2307d4e9a8147ef034f3d4, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.92648697
@@ -737,7 +741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 466644018}
-  speed: 8
+  Anim: {fileID: 466644023}
+  speed: 4
   gravity: -15
   jumpHeight: 2
   groundDistance: 0.4
@@ -746,6 +751,11 @@ MonoBehaviour:
     m_Bits: 8
   groundCheck: {fileID: 1947348747}
   weaponParent: {fileID: 1310134659}
+--- !u!95 &466644023 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: dd77e67a6b2307d4e9a8147ef034f3d4, type: 3}
+  m_PrefabInstance: {fileID: 466644016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
