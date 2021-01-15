@@ -1,9 +1,5 @@
 using UnityEngine;
-
-
 //https://www.youtube.com/watch?v=wdL4_60ya90
-namespace kenan.daniel.spel
-{
     public class Weapon : MonoBehaviour
     {
         #region Variables
@@ -23,6 +19,11 @@ namespace kenan.daniel.spel
 
         #region MonoBehaviour Callbacks
 
+        public Enum DamageType{
+        
+
+        }
+
        
         void Update()
         {
@@ -38,7 +39,6 @@ namespace kenan.daniel.spel
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-
                     Shoot();
                 }
 
@@ -61,32 +61,31 @@ namespace kenan.daniel.spel
             currentWeapon = t_newEquipment;
         }
 
-        void Shoot()
-        {
-            Transform t_spawn = transform.Find("Cameras/Camera");
+        // void Shoot()
+        // {
+        //     Transform t_spawn = transform.Find("Cameras/Camera");
 
-            //bloom
-            Vector3 t_bloom = t_spawn.position + t_spawn.forward * 1000f;
-            t_bloom += Random.Range(-loadout[currentIndex].bloom, loadout[currentIndex].bloom) * t_spawn.up;
-            t_bloom += Random.Range(-loadout[currentIndex].bloom, loadout[currentIndex].bloom) * t_spawn.right;
-            t_bloom -= t_spawn.position;
-            t_bloom.Normalize();
+        //     //bloom
+        //     Vector3 t_bloom = t_spawn.position + t_spawn.forward * 1000f;
+        //     t_bloom += Random.Range(-loadout[currentIndex].bloom, loadout[currentIndex].bloom) * t_spawn.up;
+        //     t_bloom += Random.Range(-loadout[currentIndex].bloom, loadout[currentIndex].bloom) * t_spawn.right;
+        //     t_bloom -= t_spawn.position;
+        //     t_bloom.Normalize();
 
-            //raycast
-            RaycastHit t_hit = new RaycastHit();
-            if (Physics.Raycast(t_spawn.position, t_bloom, out t_hit, 1000f, canBeShot))
-            {
-                GameObject t_newHole = Instantiate(bulletHolePrefab, t_hit.point + t_hit.normal * 0.001f, Quaternion.identity) as GameObject;
-                t_newHole.transform.LookAt(t_hit.point + t_hit.normal);
-                Destroy(t_newHole, 5f);
-            }
+        //     //raycast
+        //     RaycastHit t_hit = new RaycastHit();
+        //     if (Physics.Raycast(t_spawn.position, t_bloom, out t_hit, 1000f, canBeShot))
+        //     {
+        //         GameObject t_newHole = Instantiate(bulletHolePrefab, t_hit.point + t_hit.normal * 0.001f, Quaternion.identity) as GameObject;
+        //         t_newHole.transform.LookAt(t_hit.point + t_hit.normal);
+        //         Destroy(t_newHole, 5f);
+        //     }
 
-            // gun fx
+        //     // gun fx
 
 
-        }
+        // }
 
         #endregion
 
     }
-}

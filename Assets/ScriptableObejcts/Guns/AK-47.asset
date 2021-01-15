@@ -17,4 +17,4 @@ MonoBehaviour:
   bloom: 5
   recoil: 3
   kickback: 1
-  prefab: {fileID: 2665816474552065377, guid: cff9531a7e6189a41a78db812793fc37, type: 3}
+  prefab: {fileID: 6702408620393869735, guid: c1cf436e3c1caf7418701de9edd1c09d, type: 3}

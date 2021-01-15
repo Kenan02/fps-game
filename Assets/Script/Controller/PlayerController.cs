@@ -1,6 +1,4 @@
 using UnityEngine;
-namespace kenan.daniel.spel
-{
 
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour
@@ -8,7 +6,6 @@ namespace kenan.daniel.spel
         #region Variables
 
         public CharacterController controller;
-        public Animator Anim;
         public float speed = 12f;
         public float gravity = -10f;
         public float jumpHeight = 4f;
@@ -33,7 +30,6 @@ namespace kenan.daniel.spel
         {
             weaponParentOrigin = weaponParent.localPosition;
             controller = GetComponent<CharacterController>();
-            Anim = GetComponent<Animator>();
         }
         void Update()
         {
@@ -49,10 +45,7 @@ namespace kenan.daniel.spel
 
         }
 
-        void FixedUpdate()
-        {
-            
-        }
+    
         #endregion
 
 
@@ -78,69 +71,11 @@ namespace kenan.daniel.spel
                 weaponParent.localPosition = Vector3.Lerp(weaponParent.localPosition, targetWeaponBobPos, Time.deltaTime * 6f);
 
             }
-
-            if (controller.isGrounded)
-            {
-                //FORWARD ANIMATION
-                
-                if (Input.GetKey(KeyCode.W))
-                {
-                    Anim.SetInteger("Condition", 1);
-                    moveDir = new Vector3(0, 0, 1);
-                }
-
-                if (Input.GetKeyUp(KeyCode.W))
-                {
-                    Anim.SetInteger("Condition", 0);
-                    moveDir = new Vector3(0, 0, 0);
-                }
-                // BACK ANIMATION
-
-                if (Input.GetKey(KeyCode.S))
-                {
-                    Anim.SetInteger("walk_back", 1);
-                    moveDir = new Vector3(0, 0, -1);
-                }
-
-                if (Input.GetKeyUp(KeyCode.S))
-                {
-                    Anim.SetInteger("walk_back", 0);
-                    moveDir = new Vector3(0, 0, 0);
-                }
-                //LEFT ANIMATION
-
-                 if (Input.GetKey(KeyCode.A))
-                {
-                    Anim.SetInteger("walk_left", 1);
-                    moveDir = new Vector3(-1, 0, 0);
-                }
-
-                if (Input.GetKeyUp(KeyCode.A))
-                {
-                    Anim.SetInteger("walk_left", 0);
-                    moveDir = new Vector3(0, 0, 0);
-                }
-                //RIGHT ANIMATION  
-
-                 if (Input.GetKey(KeyCode.D))
-                {
-                    Anim.SetInteger("walk_right", 1);
-                    moveDir = new Vector3(1, 0, 0);
-                }
-
-                if (Input.GetKeyUp(KeyCode.D))
-                {
-                    Anim.SetInteger("walk_right", 0);
-                    moveDir = new Vector3(0, 0, 0);
-                }
-
                 Vector3 move = transform.right * xMov + transform.forward * zMov;
                 controller.Move(move * speed * Time.deltaTime);
                 velocity.y += gravity * Time.deltaTime;
 
                 controller.Move(velocity * Time.deltaTime);
-            }
-
 
         }
 
@@ -150,7 +85,4 @@ namespace kenan.daniel.spel
         }
 
         #endregion
-
     }
-
-}

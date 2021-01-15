@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cc25a2148ad954419bb4b3af0f36603, type: 3}
-  m_Name: M4A4
+  m_Name: AWP
   m_EditorClassIdentifier: 
-  Name: M4A4
-  firerate: 1000
-  bloom: 20
-  recoil: 1
-  kickback: 0.1
-  prefab: {fileID: 2972278927335838182, guid: e18a87703b0404146bb4cad3c6c0c3cd, type: 3}
+  Name: AWP
+  firerate: 0
+  bloom: 0
+  recoil: 0
+  kickback: 0
+  prefab: {fileID: 0}

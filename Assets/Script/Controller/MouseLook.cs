@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-namespace kenan.daniel.spel{
+using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
@@ -39,7 +36,5 @@ public class MouseLook : MonoBehaviour
     }
     #endregion
     
-    #region Private Methods
-    #endregion
-}
+   
 }
