@@ -45,14 +45,11 @@ using UnityEngine;
 
         }
 
-    
         #endregion
-
 
         #region Private Methods
         void Movement_ctrl()
         {
-
 
             float xMov = Input.GetAxis("Horizontal");
             float zMov = Input.GetAxis("Vertical");
