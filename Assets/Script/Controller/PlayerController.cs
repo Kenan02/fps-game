@@ -7,6 +7,7 @@ using UnityEngine;
 
         public CharacterController controller;
         public float speed = 12f;
+        public float sneakSpeed = 6f;
         public float gravity = -10f;
         public float jumpHeight = 4f;
         private float moveCounter;
@@ -42,7 +43,6 @@ using UnityEngine;
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             }
 
-
         }
 
         #endregion
@@ -66,14 +66,13 @@ using UnityEngine;
                 HeadBob(moveCounter, 0.035f, 0.035f);
                 moveCounter += Time.deltaTime * 3f;
                 weaponParent.localPosition = Vector3.Lerp(weaponParent.localPosition, targetWeaponBobPos, Time.deltaTime * 6f);
-
             }
+
                 Vector3 move = transform.right * xMov + transform.forward * zMov;
                 controller.Move(move * speed * Time.deltaTime);
                 velocity.y += gravity * Time.deltaTime;
 
                 controller.Move(velocity * Time.deltaTime);
-
         }
 
         void HeadBob(float p_z, float p_x_instensity, float p_y_intensity)

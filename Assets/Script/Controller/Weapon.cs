@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using kenan.daniel.spel;
 
     public class Weapon : MonoBehaviour
     {
-        
-
         public Gun[] loadout;
         public Transform weaponParent;
         private int currentIndex;
@@ -34,7 +33,6 @@ using UnityEngine;
 
             }
         }
-       
 
 
         void Equip(int p_ind)
@@ -70,10 +68,7 @@ using UnityEngine;
                 Destroy(t_newHole, 5f);
            }
 
-
-
      }
      
-
 
     }
