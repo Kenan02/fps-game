@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2acffd6d2e62b041b76d913ee7bcc0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sens: 100
+  Sens: 75
   playerBody: {fileID: 1909536216}
   weapon: {fileID: 874520094}
   cams: {fileID: 1112205627}
