@@ -557,7 +557,6 @@ GameObject:
   m_Component:
   - component: {fileID: 874520094}
   - component: {fileID: 874520095}
-  - component: {fileID: 874520096}
   - component: {fileID: 874520097}
   m_Layer: 0
   m_Name: Weapon
@@ -596,28 +595,6 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &874520096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874520093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35068a221541ad24f9d69d3e15f3b819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunScript: {fileID: 0}
-  rb: {fileID: 874520095}
-  coll: {fileID: 874520097}
-  player: {fileID: 1909536216}
-  gunContainer: {fileID: 0}
-  fpsCam: {fileID: 1112205627}
-  PickUpRange: 4
-  dropForwardForce: 15
-  dropUpwardForce: 7
-  equipped: 1
 --- !u!65 &874520097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -788,7 +765,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -1654,10 +1631,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 887033459736ba8499433ff0af7f4d4b, type: 2}
   - {fileID: 0}
   weaponParent: {fileID: 874520094}
+  muzzleFlash: {fileID: 0}
   bulletHolePrefab: {fileID: 0}
   canBeShot:
     serializedVersion: 2
     m_Bits: 0
+  dmg: 10
+  range: 100
+  maxAmmo: 10
+  fpsCam: {fileID: 1112205629}
+  reloadTime: 1
 --- !u!1 &2035073093
 GameObject:
   m_ObjectHideFlags: 0

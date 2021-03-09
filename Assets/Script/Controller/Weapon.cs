@@ -8,16 +8,29 @@ using kenan.daniel.spel;
         public Gun[] loadout;
         public Transform weaponParent;
         private int currentIndex;
+        public ParticleSystem muzzleFlash;
 
         //bullet holes
         public GameObject bulletHolePrefab;
         public LayerMask canBeShot;
         private GameObject currentWeapon;
 
-        //recoil
+        //Ammo/shooting
+        public float dmg = 10f;
+        public float range = 100f;
+        public int maxAmmo = 10;
+        public Camera fpsCam;
+        private int currentAmmo = -1;
+        public float reloadTime = 1f;
        
         void Update()
         {
+            if(currentAmmo <= 0)
+            {
+                Reload();
+                return;
+            }
+
             //Equip Weapons
             if (Input.GetKeyDown(KeyCode.Alpha1)) Equip(0);
             if (Input.GetKeyDown(KeyCode.Alpha2)) Equip(1);
@@ -32,6 +45,12 @@ using kenan.daniel.spel;
                 }
 
             }
+        }
+
+        void Reload()
+        {
+            Debug.Log("Realoding...");
+            currentAmmo = maxAmmo;
         }
 
 
@@ -50,23 +69,13 @@ using kenan.daniel.spel;
 
          void Shoot()
          {
-             Transform t_spawn = transform.Find("Cameras/Camera");
-
-             //bloom
-             Vector3 t_bloom = t_spawn.position + t_spawn.forward * 1000f;
-             t_bloom += Random.Range(-loadout[currentIndex].bloom, loadout[currentIndex].bloom) * t_spawn.up;
-             t_bloom += Random.Range(-loadout[currentIndex].bloom, loadout[currentIndex].bloom) * t_spawn.right;
-             t_bloom -= t_spawn.position;
-             t_bloom.Normalize();
-
-            //raycast
-            RaycastHit t_hit = new RaycastHit();
-            if (Physics.Raycast(t_spawn.position, t_bloom, out t_hit, 1000f, canBeShot))
+             muzzleFlash.Play();
+             RaycastHit hit;
+            if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
             {
-                GameObject t_newHole = Instantiate(bulletHolePrefab, t_hit.point + t_hit.normal * 0.001f, Quaternion.identity) as GameObject;
-                t_newHole.transform.LookAt(t_hit.point + t_hit.normal);
-                Destroy(t_newHole, 5f);
-           }
+                Debug.Log("shooting");
+            }
+            
 
      }
      
