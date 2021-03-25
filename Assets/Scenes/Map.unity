@@ -520,7 +520,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 7420950495227322404, guid: 8635816d3321f854b832667ce7bd9015, type: 3}
+  projectile: {fileID: 7165229058098125550, guid: 655848d9e9f1bad4092ea1b7506f702d, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 7420950495227322404, guid: 8635816d3321f854b832667ce7bd9015, type: 3}
+  projectile: {fileID: 7165229058098125550, guid: 655848d9e9f1bad4092ea1b7506f702d, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1
@@ -2927,7 +2927,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 7420950495227322404, guid: 8635816d3321f854b832667ce7bd9015, type: 3}
+  projectile: {fileID: 7165229058098125550, guid: 655848d9e9f1bad4092ea1b7506f702d, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 7420950495227322404, guid: 8635816d3321f854b832667ce7bd9015, type: 3}
+  projectile: {fileID: 7165229058098125550, guid: 655848d9e9f1bad4092ea1b7506f702d, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1
@@ -3824,7 +3824,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 7420950495227322404, guid: 8635816d3321f854b832667ce7bd9015, type: 3}
+  projectile: {fileID: 7165229058098125550, guid: 655848d9e9f1bad4092ea1b7506f702d, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1
@@ -4211,7 +4211,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 7420950495227322404, guid: 8635816d3321f854b832667ce7bd9015, type: 3}
+  projectile: {fileID: 7165229058098125550, guid: 655848d9e9f1bad4092ea1b7506f702d, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1
