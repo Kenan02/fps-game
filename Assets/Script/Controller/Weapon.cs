@@ -19,10 +19,13 @@ public class Weapon : MonoBehaviour
     //Ammo/shooting
     public float Damage = 10f;
     public float range = 100f;
+    public float fireRate = 15f;
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
+    public float impactForce = 30f;
 
-
+    private float nextTimeToFire = 0f;
 
     void Update()
     {
@@ -32,8 +35,9 @@ public class Weapon : MonoBehaviour
 
         if (currentWeapon != null)
         {
-            if (Input.GetMouseButtonDown(0)) 
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire) 
             {
+                nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
             }
         }
@@ -70,6 +74,14 @@ public class Weapon : MonoBehaviour
                 target.TakeDamage(Damage);
             }
 
+            if(hit.rigidbody != null)
+            {
+
+                hit.rigidbody.AddForce(-hit.normal * impactForce);
+
+            }
+            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGO, 0.5f);
 
         }
 
