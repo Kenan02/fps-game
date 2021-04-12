@@ -35,6 +35,7 @@ public class Weapon : MonoBehaviour
 
         if (currentWeapon != null)
         {
+       
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire) 
             {
                 nextTimeToFire = Time.time + 1f / fireRate;

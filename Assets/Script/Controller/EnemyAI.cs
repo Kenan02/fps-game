@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
+    public float maxHealth;
 
     //Patroling
     public Vector3 walkPoint;
@@ -25,6 +27,18 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //Health bar
+    public GameObject healthBarUI;
+    public Slider slider;
+
+
+
+
+     void Start()
+    {
+        health = maxHealth;
+        slider.value = CalculateHealth();
+    }
 
     private void Awake()
     {
@@ -41,8 +55,30 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
+        //HealthBar
+        slider.value = CalculateHealth();
+
+        if(health < maxHealth)
+        {
+            healthBarUI.SetActive(true);
+        }
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
     }
 
+    float CalculateHealth()
+    {
+        return health / maxHealth;
+    }
     private void Patroling()
     {
         if (!walkPointSet) SearchWalkPoint();
@@ -79,7 +115,7 @@ public class EnemyAI : MonoBehaviour
 
         if(!alreadyAttacked)
         {
-            //Attack Code here
+            //Attack Code här
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
